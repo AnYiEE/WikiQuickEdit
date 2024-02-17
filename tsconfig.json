@@ -1,0 +1,62 @@
+{
+	"compilerOptions": {
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"alwaysStrict": true,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+
+		"allowImportingTsExtensions": true,
+		"baseUrl": ".",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"paths": {
+			"~/*": ["./*"],
+			"@components/*": ["src/components/*"],
+			"@constants/*": ["src/constants/*"],
+			"@i18n": ["src/i18n/t.tsx"],
+			"@methods/*": ["src/methods/*"],
+			"@modules/*": ["src/modules/*"],
+			"@utils/*": ["src/utils/*"]
+		},
+		"resolveJsonModule": true,
+
+		"downlevelIteration": true,
+		"newLine": "lf",
+		"noEmit": true,
+		"removeComments": false,
+
+		"allowJs": true,
+		"checkJs": true,
+
+		"plugins": [
+			{
+				"name": "typescript-plugin-css-modules",
+				"options": {
+					"classnameTransform": "camelCaseOnly",
+					"goToDefinition": true
+				}
+			}
+		],
+
+		"esModuleInterop": true,
+		"isolatedModules": true,
+
+		"jsx": "react",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"target": "ESNext",
+
+		"skipLibCheck": true
+	},
+	"exclude": ["node_modules/types-mediawiki-renovate/scripts"],
+	"include": ["node_modules/types-mediawiki-renovate", "scripts/**/*", "src/**/*"]
+}
