@@ -1,5 +1,5 @@
 const camelize = (string: string, space: boolean = true): string => {
-	return string.replace(/-./g, (substring: string): string => {
+	return string.replace(/-./g, (substring) => {
 		const [, char] = substring;
 		if (!char) {
 			return substring;
@@ -16,7 +16,7 @@ const capitalizeFirstLetter = (string: string): string => {
 const firstLetters = (string: string, separator: string = ' '): string => {
 	return string
 		.split(separator)
-		.map((word: string): string => {
+		.map<string>((word) => {
 			return word.charAt(0);
 		})
 		.join('');
